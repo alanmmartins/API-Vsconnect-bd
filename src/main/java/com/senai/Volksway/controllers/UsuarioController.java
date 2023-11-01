@@ -17,7 +17,7 @@ import java.util.UUID;
 @RestController //Annotation para definir controller
 @RequestMapping(value = "/usuarios", produces = {"application/json"})
 public class UsuarioController {
-    @Autowired //Injeção de dependência (deixar o código desacoplado, classe que utiliza funcionalidades de outras classes)
+    @Autowired //Injeção de dependência
     UsuarioRepository usuarioRepository;
 
     @GetMapping
