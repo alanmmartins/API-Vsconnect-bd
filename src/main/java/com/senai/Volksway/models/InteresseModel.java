@@ -25,10 +25,11 @@ public class InteresseModel implements Serializable {
     @ManyToOne
     @JoinColumn(name = "id_propaganda", referencedColumnName = "id_usuario")
     private UUID id_propaganda;
-
+    //
     @ManyToOne
     @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
     private UUID id_usuario;
 
     private boolean meio_contato_email;
+    //interesse e eo model para usuario
 }

@@ -8,9 +8,9 @@ import java.io.Serializable;
 import java.io.Serial;
 import java.util.UUID;
 
+@Entity
 @Getter
 @Setter
-@Entity
 @Table(name = "tb_empresa")
 public class EmpresaModel implements Serializable {
     @Serial
@@ -19,8 +19,8 @@ public class EmpresaModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_empresa", nullable = false)
-    private UUID id;
-    private String razao_social;
     private String cidade;
+    private String razao_social;
+    private UUID id;
     private String cnpj;
 }

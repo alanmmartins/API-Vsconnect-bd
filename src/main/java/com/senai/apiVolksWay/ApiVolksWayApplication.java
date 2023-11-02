@@ -1,13 +1,14 @@
-package com.senai.Volksway;
+package com.senai.apiVolksWay;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
-public class VolkswayApplication {
+public class ApivolkswayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VolkswayApplication.class, args);
+		SpringApplication.run(ApivolkswayApplication.class, args);
 	}
 
 }

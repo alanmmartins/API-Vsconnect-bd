@@ -13,4 +13,5 @@ import org.springframework.web.bind.annotation.*;
 @RestController //Annotation para definir controller
 @RequestMapping(value = "/veiculo", produces = {"application/json"})
 public class VeiculoController {
+
 }

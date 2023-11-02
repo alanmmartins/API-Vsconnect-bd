@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-@Repository //annotation do repository
+@Repository
 public interface ChecklistRepository extends JpaRepository<ChecklistModel, UUID> {
+
+
 }

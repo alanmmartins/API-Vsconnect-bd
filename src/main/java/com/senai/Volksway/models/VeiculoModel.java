@@ -29,5 +29,5 @@ public class VeiculoModel implements Serializable {
 
     private String placa;
 
-    private String codigo_chassi;
+    private String chassi;
 }

@@ -9,16 +9,18 @@ public record PropagandaDto(
         @NotBlank UUID id_usuario,
         @NotBlank String titulo,
 
+        @NotBlank String descricao,
+
         @NotBlank String url,
 
-        @NotBlank String descricao,
+        @NotBlank boolean importancia,
+
+        @NotBlank Date data_limite,
 
         @NotBlank Date img,
         @NotBlank String publico_alvo,
-        @NotBlank Date data_limite,
 
         @NotBlank float preco,
-        @NotBlank boolean importancia,
         @NotBlank String nomeTipoPropaganda) {
 
 }

@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-@Repository //annotation do repository
+@Repository
 public interface PropagandaRepository extends JpaRepository<PropagandaModel, UUID> {
 }
 

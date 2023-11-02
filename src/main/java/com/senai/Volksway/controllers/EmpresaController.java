@@ -1,7 +1,10 @@
 package com.senai.Volksway.controllers;
 
+import com.senai.Volksway.dtos.EmpresaDto;
 import com.senai.Volksway.dtos.UsuarioDto;
+import com.senai.Volksway.models.EmpresaModel;
 import com.senai.Volksway.models.UsuarioModel;
+import com.senai.Volksway.repositories.EmpresaRepository;
 import com.senai.Volksway.repositories.UsuarioRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
@@ -14,7 +17,53 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@RestController //Annotation para definir controller
+@RestController
 @RequestMapping(value = "/empresa", produces = {"application/json"})
 public class EmpresaController {
+
+    @Autowired
+    EmpresaRepository empresaRepository;
+
+
+    @GetMapping
+    public ResponseEntity<List<EmpresaModel>> listarEmpresas(){
+        return  ResponseEntity.status(HttpStatus.OK).body(empresaRepository.findAll());
+    }
+
+
+    @GetMapping("/{idEmpresa}")
+    public ResponseEntity<Object> buscarEmpresa(@PathVariable(value = "idEmpresa")UUID id){
+        Optional<EmpresaModel> empresaBuscada = empresaRepository.findById(id);
+
+        if (empresaBuscada.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario não encontrado");
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(empresaBuscada.get());
+    }
+
+
+    @PostMapping
+    public ResponseEntity<Object> criarEmpresa(@ModelAttribute @Valid EmpresaDto empresaDto){
+        if (empresaRepository != null){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("CNPJ já cadastrado!");
+        }
+
+        EmpresaModel novaEmpresa = new EmpresaModel();
+        BeanUtils.copyProperties(empresaDto, novaEmpresa);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(empresaRepository.save(novaEmpresa));
+    }
+
+    @DeleteMapping("/{idEmpresa}")
+    public ResponseEntity<Object> deletarEmpresa(@PathVariable(value = "idEmpresa") UUID id){
+        Optional<EmpresaModel> empresaBuscada = empresaRepository.findById(id);
+
+        if(empresaBuscada.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario não encontrado");
+        }
+
+        empresaRepository.delete(empresaBuscada.get());
+        return ResponseEntity.status(HttpStatus.OK).body("Empresa deletada com sucesso");
+    }
 }

@@ -10,15 +10,15 @@ public record UsuarioDto(
         @NotBlank UUID id_empresa,
         @NotBlank String nome,
 
+        @NotBlank String cpf,
+        @NotBlank String senha,
         @NotBlank @Email(message = "O email deve estar no formato válido") String email,
 
-        @NotBlank String senha,
 
         @NotBlank String telefone,
 
-        @NotBlank Date data_nascimento,
         @NotBlank String cidade,
-        @NotBlank String cpf,
+        @NotBlank Date data_nascimento,
 
         @NotBlank int tipo_usuario) {
 
