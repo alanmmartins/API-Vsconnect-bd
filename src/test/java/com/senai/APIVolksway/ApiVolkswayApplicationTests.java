@@ -1,10 +1,10 @@
-package com.senai.Volksway;
+package com.senai.APIVolksway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class VolkswayApplicationTests {
+class ApiVolkswayApplicationTests {
 
 	@Test
 	void contextLoads() {
