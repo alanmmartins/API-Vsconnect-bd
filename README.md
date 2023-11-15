@@ -20,3 +20,7 @@ Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 
 - [Java](https://www.oracle.com/java/technologies/javase-downloads.html)
 - [Maven](https://maven.apache.org/download.cgi)
+
+- ## Testes da API no Insomnia
+
+Os testes da API são realizados no [Insomnia](https://insomnia.rest/download). Certifique-se de ter esta ferramenta instalada para interagir eficientemente com a API.
