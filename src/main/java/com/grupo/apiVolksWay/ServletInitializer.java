@@ -1,4 +1,4 @@
-package com.senai.APIVolksway;
+package com.grupo.apiVolksWay;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(ApiVolkswayApplication.class);
+		return application.sources(ApiVolksWayApplication.class);
 	}
 
 }
