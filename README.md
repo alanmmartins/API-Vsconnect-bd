@@ -16,14 +16,7 @@ Este projeto tem como objetivo de criar um sistema web integrado, que atua como 
 - Cliente/Desenvolvedor realizar autenticação
 
 
-## Preparação de ambiente
 
-Para executar este projeto, é necessário ter duas ferramentas em sua máquina.
-
-
-![Imagem](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png)
-
-![Imagem](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png)
 
 ## Instalação
 
