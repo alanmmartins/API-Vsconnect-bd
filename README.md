@@ -1,26 +1,112 @@
-# API-Volksway
+# VSConnect
 
-VOLKSWAY é mais do que um simples sistema de gerenciamento de usuários - é a peça-chave para otimizar a gestão de recursos em seu universo automotivo. Desenvolvido em Java, o VOLKSWAY oferece um conjunto robusto de funcionalidades, desde o cadastro de motoristas até a administração eficaz de frotas de caminhões Proprietarios e gestao de interesses .
+
+Este projeto tem como objetivo de criar um sistema web integrado, que atua como um intermediário entre clientes em busca de serviços e desenvolvedores disponíveis para prestá-los de forma rápida e eficiente.
+
 
 
 ### Funcionalidades
 
-- **Gestão Multifacetada de Usuários**: Cadastre e gerencie diversos tipos de usuários, incluindo motoristas, administradores de frota, proprietários e administrador padrão ADMIN e interesses .
+- Lista de todos os desenvolvedores 
+- Lista de todos os serviços
+- Filtro de Skill de Desenvolvedores
+- Filtro de Skill de Serviços
+- Cadastro de serviço
+- Cadastro de desenvolvedor
+- Cliente/Desenvolvedor realizar autenticação
 
 
-### Autenticação Segura por JWT
+## Preparação de ambiente
 
-- **Token JWT para Segurança**: Utilizamos autenticação por login com tokens JWT para garantir a segurança das operações. Proteja suas informações com um sistema à prova de invasões.
+Para executar este projeto, é necessário ter duas ferramentas em sua máquina.
 
-## Como Começar
 
-### Pré-requisitos
+![Imagem](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png)
 
-Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+![Imagem](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png)
 
-- [Java](https://www.oracle.com/java/technologies/javase-downloads.html)
-- [Maven](https://maven.apache.org/download.cgi)
+## Instalação
 
-- ## Testes da API no Insomnia
+Para criar um projeto em [React](https://react.dev/learn) + [TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html) utilizando o [Vite](https://vitejs.dev/guide/), precisa executar os seguintes comandos:
 
-Os testes da API são realizados no [Insomnia](https://insomnia.rest/download). Certifique-se de ter esta ferramenta instalada para interagir eficientemente com a API.
+> Cria o projeto:
+```bash
+  npm init vite@latest nomedoprojeto -- --template react-ts
+```
+> Entra na pasta do projeto:
+```bash
+  cd nomedoprojeto
+```
+> Baixa as dependências do projeto:
+```bash
+   npm install
+```
+> Inicia o projeto:
+```bash
+   npm run dev
+```    
+
+
+## Pacotes
+
+O projeto necessita de pacotes importantes, como:
+
+- [Router](https://www.npmjs.com/package/react-router-dom) 
+- [React Secure Storage](https://www.npmjs.com/package/react-secure-storage)
+
+### Instalação dos pacotes
+
+> Entrar na pasta do projeto:
+```bash
+  cd nomedoprojeto
+```
+> Instalar o pacote Router:
+```bash
+  npm i react-router-dom
+```
+> Instalar o React Secure Storage:
+```bash
+  npm i react-secure-storage
+```
+## Organização de pastas e arquivos
+
+A estrutura de pastas e arquivos foi organizada de forma clara e utilizada no mercado.
+
+Árvore de arquivos: 
+```
+vsconnect-react-deploy/
+  ├── node_modules/     (Pacotes/dependências do projeto)
+  ├── public/           (Arquivos públicos)
+  ├── src/              (Código-fonte) 
+  │   ├── assets/       (Recursos estáticos)
+  │   │   ├── images
+  │   ├── components/   (Componentes reutilizáveis)
+  │   │   ├── Header/
+  │   │   ├── Footer/
+  |   |   ├── CardDev/
+  │   │   └── CardServico/
+  |   ├── pages/        (Componentes que representa páginas)
+  |   |   ├── CadastroServico/
+  |   |   ├── CadastroUsuario/
+  |   |   ├── Home/
+  |   |   ├── ListaDevs/
+  |   |   ├── ListaServicos/
+  |   |   ├── Login/
+  |   |   ├── PerfilUsuario/
+  |   |   ├── VisualizarServico/
+  |   ├── utils/         (Funções reutilizáveis)
+  |   |   ├── api.ts/
+  |   ├── index.css      (Estilização global)
+  |   ├── main.tsx       (Renderiza os componentes na página HTML)
+  │   └── vite-env.d.ts  (Define os tipos para variáveis de ambiente)
+  ├── .eslintrc.cjs      (Configuração do ESLint)
+  ├── .gitignore         (Arquivos/pastas a serem ignorados pelo Git)
+  ├── index.html         (HTML principal)
+  ├── package.json       (Informações do projeto e dependências)
+  ├── package-lock.json  (Versões específicas das dependências)
+  ├── README.md          (Documentação do projeto)
+  ├── tsconfig.json      (Informações do projeto e dependências)
+  ├── tsconfig.node.json (Versões específicas das dependências)
+  └── vite.config.ts     (Configuração do Vite)
+```
+
